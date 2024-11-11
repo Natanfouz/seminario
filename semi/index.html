@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seminário sobre a crise das queimadas florestais no Brasil, abordando suas causas, consequências e soluções.">
+    <title>A Crise das Queimadas Florestais - Seminário</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Ano', 'Queimadas (em mil)'],
+                ['2018', 70],
+                ['2019', 90],
+                ['2020', 75],
+                ['2021', 85],
+                ['2022', 65],
+                ['2023', 95]
+            ]);
+
+            var options = {
+                title: 'Evolução das Queimadas Florestais no Brasil (2018-2023)',
+                hAxis: { title: 'Ano', titleTextStyle: { color: '#333' } },
+                vAxis: { title: 'Incêndios (em milhares)', minValue: 0 },
+                curveType: 'function',
+                legend: { position: 'bottom' },
+                colors: ['#FF5733'],
+                backgroundColor: '#f5f5f5',
+                chartArea: { width: '80%', height: '70%' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>A Crise das Queimadas Florestais</h1>
+    </header>
+
+    <nav>
+        <a href="#introducao">Introdução ao Problema</a>
+        <a href="#causas">Causas e Consequências</a>
+        <a href="#timeline">Linha do Tempo</a>
+        <a href="#solucoes">Soluções e Ações Necessárias</a>
+        <a href="#referencias">Referências</a>
+    </nav>
+
+    <section id="introducao">
+        <h2>Introdução ao Problema</h2>
+        <p>
+            As queimadas florestais no Brasil têm se intensificado nas últimas décadas, com consequências devastadoras para o meio ambiente e a biodiversidade. Essa questão é amplamente observada nas regiões da Amazônia e do Pantanal, áreas que abrigam ecossistemas únicos. As queimadas são muitas vezes associadas a práticas de desmatamento ilegal e à expansão de atividades agrícolas. O impacto não se restringe apenas às áreas atingidas, mas afeta diretamente o clima global, contribuindo para o aquecimento do planeta.
+        </p>
+    </section>
+
+    <section id="causas">
+        <h2>Causas e Consequências</h2>
+        <p>
+            As principais causas das queimadas florestais no Brasil estão ligadas à ação humana. O desmatamento ilegal para a expansão de pastagens e áreas agrícolas, especialmente na Amazônia, tem sido uma das maiores fontes de ignição dos incêndios. Essas queimadas são, muitas vezes, realizadas propositalmente para "limpar" grandes áreas de floresta. No entanto, fatores naturais, como a seca prolongada, também contribuem para a propagação desses incêndios, exacerbando a situação.
+        </p>
+
+        <!-- Gráfico das Queimadas Florestais -->
+        <h3>Dados das Queimadas Florestais (2018-2023)</h3>
+        <div id="chart_div"></div>
+    </section>
+    
+    <section id="timeline">
+        <h2>Linha do Tempo de Incêndios Notáveis</h2>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-item left">
+                    <h3>2019 - Queimadas na Amazônia</h3>
+                    <p>O ano de 2019 ficou marcado pelo aumento significativo nas queimadas na Amazônia, levando a uma crise internacional.</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-item right">
+                    <h3>2020 - Queimadas no Pantanal</h3>
+                    <p>Em 2020, o Pantanal registrou incêndios recordes, destruindo 30% do bioma e impactando severamente a biodiversidade local.</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-item left">
+                    <h3>2021 - Retomada dos Incêndios</h3>
+                    <p>Com a seca extrema, as queimadas voltaram com força em várias regiões, afetando a qualidade do ar e a saúde pública.</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-item right">
+                    <h3>2023 - Nova Crise de Queimadas</h3>
+                    <p>Em 2023, uma nova onda de queimadas destacou a urgência de políticas mais eficazes para conter o desmatamento e preservar o bioma.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="solucoes">
+        <h2>Soluções e Ações Necessárias</h2>
+        <p>
+            Para combater essa crise, é necessário um esforço conjunto entre governo, sociedade civil e a comunidade internacional. Primeiramente, é fundamental intensificar a fiscalização e o combate ao desmatamento ilegal, utilizando tecnologias avançadas, como monitoramento por satélite e drones, para detectar queimadas em tempo real. Além disso, leis ambientais mais rigorosas e a punição exemplar para crimes ambientais são essenciais para desestimular essas práticas.
+        </p>
+        <p>
+            Em conclusão, a crise das queimadas florestais no Brasil é um problema complexo que requer uma abordagem multidimensional. Somente por meio de uma combinação de fiscalização rigorosa, investimentos em sustentabilidade e conscientização é que será possível reduzir a incidência de queimadas e proteger as florestas brasileiras para as futuras gerações.
+        </p>
+    </section>
+    
+    <section id="referencias">
+        <h2>Referências</h2>
+        <ul>
+            <li>INPE - Instituto Nacional de Pesquisas Espaciais. Disponível em: <a href="http://www.inpe.br">www.inpe.br</a></li>
+            <li>IBAMA - Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis. Disponível em: <a href="http://www.ibama.gov.br">www.ibama.gov.br</a></li>
+            <li>WWF Brasil - Organização para Conservação da Natureza. Disponível em: <a href="https://www.wwf.org.br">www.wwf.org.br</a></li>
+            <li>CNN Brasil. "Brasil bate recorde de emissão de carbono e tem quase 100% mais queimadas em 2024." Disponível em: <a href="https://www.cnnbrasil.com.br/nacional/brasil-bate-recorde-de-emissao-de-carbono-e-tem-quase-100-mais-queimadas-em-2024/" target="_blank">CNN Brasil</a></li>
+        </ul>
+    </section>
+
+    <script>
+        // Rolagem suave para navegação
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
